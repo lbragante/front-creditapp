@@ -1,0 +1,24 @@
+<div class="jumbotron jumbotron-fluid" style="margin-top: 72px;">
+    <div class="container">
+        <h1>Créditos disponíveis</h1>
+    </div>
+</div>
+<div class="container">
+    <div *ngIf="creditsObs$ | async as credits" class="row">
+
+        <div *ngFor="let credit of credits" class="col-sm-12 col-md-4">
+            <a routerLink="/credits/{{credit._id}}" href="#">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="icon-card float-left mr-2">
+                            <img width="60px" src="https://image.flaticon.com/icons/svg/1521/1521316.svg" alt="">
+                            <div class="content-card">{{ credit.title }}</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>

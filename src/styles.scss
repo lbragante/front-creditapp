@@ -1,0 +1,62 @@
+@import url(https://use.fontawesome.com/releases/v5.0.10/css/all.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700);
+$font-family-base: Montserrat;
+$headings-font-family: Montserrat;
+$enable-grid-classes: true;
+$primary: #3054ca;
+$secondary: #1ae5be;
+$success: #10ac84;
+$danger: #ee5253;
+$info: #0abde3;
+$warning: #feca57;
+$light: #fafafa;
+$dark: darken($primary, 40%);
+$spacer: 2.5rem;
+$border-width: .8px;
+$spacer: 2.1rem;
+$font-size-base: 1.05rem !default;
+$border-radius: .15rem !default;
+$border-radius-lg: .175rem !default;
+$border-radius-sm: .12rem !default;
+$border-width: .1em;
+$input-btn-padding-y: .75rem !default;
+$input-btn-padding-x: .7rem !default;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+body {
+    background-color: $light;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.jumbotron {
+    margin-bottom: 3em;
+
+    h1 {
+        color: $primary;
+    }
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 30px;
+}
+
+.card {
+    box-shadow: 4px 4px 20px 0 rgba(120,135,182,.1);
+}
+
+::-moz-selection {
+    color: darken($secondary, 40%);
+    background-color: $secondary;
+}
+  
+::selection {
+    color: darken($secondary, 40%);
+    background-color: $secondary;
+}
+

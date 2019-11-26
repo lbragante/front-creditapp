@@ -1,0 +1,30 @@
+<div class="jumbotron jumbotron-fluid" style="margin-top: 72px;">
+    <div class="container">
+        <h1>Minhas solicitações</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Status</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Parcelas</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="solicitationsObs$ | async as solicitations">
+                    <tr *ngFor="let solicitation of solicitations">
+                        <td>{{ solicitation.status }}</td>
+                        <td>{{ solicitation.value }}</td>
+                        <td>{{ solicitation.quantityInstallments }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

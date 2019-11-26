@@ -1,0 +1,35 @@
+<div class="jumbotron jumbotron-fluid" style="margin-top: 72px;">
+    <div class="container" *ngIf="creditsObs$ | async as credit">
+        <h1>{{ credit.title }}</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" *ngIf="creditsObs$ | async as credit">
+        <div class="col-6">
+            <p>{{ credit.description }}</p>
+        </div>
+
+        <div class="col-6">
+            <h2>Faça sua solicitação</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="value">Valor</label>
+                        <input type="number" class="form-control shadow-none" name="value" id="value" placeholder="Valor" [(ngModel)]="value" autofocus>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="quantityInstallments">Parcelas</label>
+                        <input type="number" class="form-control shadow-none" name="quantityInstallments" id="quantityInstallments" [(ngModel)]="quantityInstallments"
+                            placeholder="Parcelas">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block shadow-none" (click)="saveSolicitation()">Solicitar o seu {{ credit.title }}</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+</div>

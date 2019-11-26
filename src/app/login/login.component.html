@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            
+        </div>
+        <div class="col-sm-4">
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control shadow-none" id="email"
+                        placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control shadow-none" id="password" placeholder="Senha" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block shadow-none" (click)="auth()">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+</div>
